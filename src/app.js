@@ -22,4 +22,9 @@ app.get("/", (req, res) => {
   res.json({ response: "Hello World!" });
 });
 
+//import routes
+import healthCheckRouter from "./routes/healthcheck.route.js";
+//routes
+app.use("/api/v1/healthcheck", healthCheckRouter);
+
 export default app;
